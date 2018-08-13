@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>L18</title>
+	<style type="text/css">
+	table{
+		margin: 20px auto;
+		border: 2px solid orange;
+	}
+	td{
+		height: 40px;
+		line-height: 40px;
+		padding: 5px;
+		width: 200px;
+		background: rgba(100,50,10,0.3);
+		text-align: right;
+		font-size: 24px;
+	}
+	select,input{
+		width: 200px;
+		height: 40px;
+		font-size: 18px;
+	}
+	[type=radio]{
+		width: 30px;
+		height: 30px;
+	}
+	[type=submit],[type=reset]{
+		width: 100px;
+		text-align: center;
+		font-size: 20px;
+		display: inline-block;
+		position: relative;
+		margin: 10px;
+		padding: 0 20px;
+		text-align: center;
+		text-decoration: none;
+		font: bold 12px/25px Arial, sans-serif;
+
+		text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		border-radius: 30px;
+
+		-webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+		-moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+		box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+
+		-webkit-transition: all 0.15s ease;
+		-moz-transition: all 0.15s ease;
+		-o-transition: all 0.15s ease;
+		-ms-transition: all 0.15s ease;
+		transition: all 0.15s ease;
+	}
+	td:first-child{
+		width: 150px;
+	}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>用户名：</td>
+			<td><input type="text" id="st1"></td>
+		</tr>
+		<tr>
+			<td>联系电话：</td>
+			<td><input type="text" id="st2"></td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input type="password" id="st3"></td>
+		</tr>
+		<tr>
+			<td>确认密码：</td>
+			<td><input type="password" id="st4" onblur="check()"></td>
+		</tr>
+		<tr>
+			<td>性别：</td>
+			<td style="text-align: center;">
+				<input type="radio" name="sex" id="sex1">男
+				<input type="radio" name="sex" id="sex2">女
+			</td>
+		</tr>
+		<tr>
+			<td>学历：</td>
+			<td>
+				<select id="select">
+				<option value="高中" selected>高中</option>
+				<option value="大专">大专</option>
+				<option value="本科">本科</option>
+				<option value="本科以上">本科以上</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"; text-align: center;>
+				<input type="submit" name="button1" id="button1" onclick="cs()">
+				<input type="reset" name="button2" id="button2" value="重置">
+			</td>
+		</tr>
+		<script type="text/javascript">
+		// 自定义通过ID获取元素的函数
+			function $(id) {
+				return document.getElementById(id);
+			}
+			function check() {
+				var boo=$('st3').value==$('st4').value;
+				if (boo) {
+					return ture;
+				}else
+				{
+					alert('密码不正确')
+				}
+			}
+			function cs() {
+				var str='';
+				str+="\n用户名："
+				str+=$('st1').value;
+				str+="\n联系电话："
+				str+=$('st2').value;
+				str+="\n性别："
+				str+=$('sex1').checked?'男':'女';
+				str+="\n学历："
+				str+=$('select').value;
+				alert('用户信息：\n'+str)
+			}
+		</script>
+	</table>
+</body>
+</html>
