@@ -1,3 +1,3 @@
 # jsp
-html+css+jsp
+html+css+jsp<br>
 创建对象的几种方法：普通模式；工厂模式；原型模式；组合模式；动态原型法
