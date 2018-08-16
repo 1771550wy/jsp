@@ -16,7 +16,7 @@ else
 }
 </script>
 
-<img id="myimage" onclick="changeImage()" src="../...jpg2">
+<img id="myimage" onclick="changeImage()" src="../...jpg1">
 
 <p>点击更换图片</p>
 
