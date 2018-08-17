@@ -6,3 +6,4 @@ html+css+jsp<br>
 3.L01：改变 HTML 元素的内容<br>
 4.L02：改变 HTML 图片的内容<br>
 5.测试和捕捉：try 测试代码块错误； catch 处理错误；成对出现<br>
+6.throw：自定义错误实现检测<br>
