@@ -4,4 +4,5 @@ html+css+jsp<br>
 1.constructor：创建对象的几种方法：普通模式；工厂模式；原型模式；组合模式；动态原型法<br>
 2.authentification of user：构建表单，文本框，密码，单选按钮等及css样式<br>
 3.L01：改变 HTML 元素的内容<br>
-3.L02：改变 HTML 图片的内容<br>
+4.L02：改变 HTML 图片的内容<br>
+5.测试和捕捉：try 测试代码块错误； catch 处理错误；成对出现<br>
